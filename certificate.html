@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>International beauty skills academy</title>
+  <link rel="stylesheet" href="css/style.css" />
+
+  <style>
+    /* Certificate Viewer */
+.certificate-section {
+  width: 100vw;
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgb(239, 239, 235);
+  padding: 2rem;
+}
+
+.certificate-section .container {
+  width: 100%;
+  max-width: 600px;
+  text-align: center;
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+}
+
+input#certInput {
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  flex: 1;
+}
+
+.d-flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+.certificate-section .container {
+  animation: fadeInUp 0.8s ease forwards;
+  opacity: 0;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.btn-primary {
+  background-color: #d7c60e;
+  color: #fbfafa; /* black text for contrast */
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-primary:hover {
+  background-color: #c1b010; /* slightly darker shade for hover */
+  transform: scale(1.05);
+}
+
+
+
+ 
+    .text-section {
+      text-align: center;
+    }
+
+    .word {
+      display: inline-block;
+      font-size: 2.8rem;
+      font-weight: bold;
+      margin: 0 10px;
+      opacity: 0;
+      color: black;
+      position: relative;
+      transform: rotateX(90deg) scale(0.8);
+      animation: animateWord 0.8s ease-out forwards;
+    }
+
+    /* Add animation delays for each word */
+    .word:nth-child(1) { animation-delay: 0s; }
+    .word:nth-child(2) { animation-delay: 0.5s; }
+    .word:nth-child(3) { animation-delay: 1s; }
+    .word:nth-child(4) { animation-delay: 1.5s; }
+    .word:nth-child(5) { animation-delay: 2s; }
+
+    @keyframes animateWord {
+      0% {
+        opacity: 0;
+        transform: rotateX(90deg) scale(0.8);
+        color: black;
+      }
+      100% {
+        opacity: 1;
+        transform: rotateX(0deg) scale(1);
+        color: rgb(52, 52, 18);
+      }
+    }
+
+    /* Underline effect using ::after pseudo-element */
+    .word::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -6px;
+      width: 0%;
+      height: 3px;
+      background-color: rgb(33, 33, 29);
+      transition: width 0.5s ease-out;
+    }
+
+    .word.animated::after {
+      width: 100%;
+    }
+
+
+      .certificate-card {
+      border: 1px solid #ccc;
+      padding: 15px;
+      margin-top: 20px;
+      background-color: #f9f9f9;
+    }
+    .invalid-message {
+      color: red;
+      margin-top: 10px;
+    }
+    .verify-container {
+      max-width: 500px;
+      margin: auto;
+      padding: 20px;
+      text-align: center;
+    }
+    input, button {
+      margin: 10px;
+      padding: 10px;
+    }
+  </style>
+</head>
+<body>
+  
+
+   <header>
+  <nav class="navbar">
+    <div class="logo">
+      <a href="index.html">
+        <img src="images/logo.png" alt="Salon Logo" />
+       
+      </a>
+    </div>
+
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html" >Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li class="dropdown">
+        <a href="#">Courses ▼</a>
+        <ul class="dropdown-menu">
+          <li><a href="hair.html">Hair</a></li>
+          <li><a href="makeup.html">Makeup</a></li>
+          <li><a href="skin.html">Skin</a></li>
+          <li><a href="nail.html">Nail</a></li>
+        </ul>
+      </li>
+      <li><a href="certificate.html" class="active">Certificate</a></li>
+      <li><a href="contact.html" >Contact</a></li>
+    </ul>
+
+    <div class="menu-toggle" id="mobile-menu">&#9776;</div>
+  </nav>
+</header>
+
+
+  <section style="
+  width: 100vw; 
+  height: 50vh; 
+  background: url('images/Artboard\ Saloon.png') no-repeat center center / cover; 
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  color: white; 
+  font-size: 4vw; 
+  font-weight: 700; 
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.7); 
+  user-select: none;
+">
+  <h2>Certificates</h2>
+      
+</section>
+
+
+  
+
+
+
+     <section class="certificate-section">
+  <div class="container">
+    <h1 class="text-center mb-4" style="margin-bottom: 20px;"><div class="text-section">
+  <span class="word">Certification</span>
+  <span class="word">from</span>
+  <span class="word">2025</span>
+  <span class="word">–</span>
+  <span class="word">onwards</span>
+</div></h1>
+    <div class="d-flex justify-content-center mb-3">
+      <input
+        type="text"
+        id="certInput"
+        class="form-control w-50 me-2"
+        placeholder="Enter Certificate Number"
+        aria-label="Certificate Number"
+      />
+      <button class="btn btn-primary" onclick="openCertificate()">View Certificate</button>
+    </div>
+    <div id="message" class="text-center text-danger fw-bold"></div>
+  </div>
+</section>
+
+
+
+
+     <section class="verify-section" id="certificate">
+    <div class="verify-container">
+      <h2><div class="text-section">
+  <span class="word">Certification</span>
+  <span class="word">from</span>
+  <span class="word">2021</span>
+  <span class="word">–</span>
+  <span class="word">2024</span></h2>
+
+      <form id="verifyForm" class="verify-form">
+        <input type="text" id="certificateNumber" placeholder="Enter Certificate Number" required />
+        <button type="submit">View Certificate</button>
+      </form>
+
+      <div id="certificateCard" class="certificate-card hidden">
+        <h3>Certificate of Completion</h3>
+         <p><strong>Certificate Number:</strong> <span id="certNumberDisplay"></span></p>
+          <p><strong>Name:</strong> <span id="certName"></span></p>
+          <p><strong>Father's Name:</strong> <span id="certFATHERName"></span></p>
+          <p><strong>Course:</strong> <span id="certCourse"></span></p>
+          <p><strong>Grade:</strong> <span id="certGrade"></span></p>
+          <p><strong>Course Start Date:</strong> <span id="certStartDate"></span></p>
+          <p><strong>Course End Date:</strong> <span id="certEndDate"></span></p>
+          <p><strong>Date of Issue:</strong> <span id="certDate"></span></p>
+      </div>
+
+      <div id="invalidMessage" class="invalid-message hidden">
+        ❌ Certificate number not found. Please try again.
+      </div>
+      
+        <button id="searchAnotherBtn" class="hidden">🔄 Search Another Certificate</button>
+    </div>
+  </section>
+        
+
+   
+
+
+
+    <footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-about">
+      <h3>International Beauty Skills Academy</h3>
+      <p>
+        Empowering you with professional courses in hair, makeup, skin care, and nails to build a brilliant beauty career.
+      </p>
+    </div>
+    <div class="footer-links">
+      <h4>Quick Links</h4>
+      <ul>
+         <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="certificate.html">Certificate</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-contact">
+      <h4>Contact Us</h4>
+      <p>Email: ibsainternationalbeautyskillsa@gmail.com</p>
+      <p>Phone: +91 87289 85104</p>
+      <p>Address:  Opp ITI, St. No. 2, Chandigarh Rd, Ranjit Nagar, Nawanshahr, Punjab 144514</p>
+      <div class="social-icons">
+        <a href="#" aria-label="Facebook"><img src="https://cdn-icons-png.flaticon.com/24/733/733547.png" alt="Facebook" /></a>
+        <a href="#" aria-label="Instagram"><img src="https://cdn-icons-png.flaticon.com/24/733/733558.png" alt="Instagram" /></a>
+  
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 Beauty Skills Academy. All rights reserved.</p>
+  </div>
+</footer>
+
+
+
+<script>
+    function openCertificate() {
+      const certNumber = document.getElementById("certInput").value.trim();
+      const message = document.getElementById("message");
+      message.textContent = "";
+
+      if (certNumber === "") {
+        message.textContent = "Please enter a certificate number.";
+        return;
+      }
+
+      const filePath = `certificate/${certNumber}.pdf`;
+
+      fetch(filePath, { method: "HEAD" })
+        .then((response) => {
+          if (response.ok) {
+            window.open(filePath, "_blank");
+          } else {
+            message.textContent = "Certificate not found.";
+          }
+        })
+        .catch((error) => {
+          console.error(error);
+          message.textContent = "Error loading certificate.";
+        });
+    }
+  </script>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

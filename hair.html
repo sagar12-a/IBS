@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>International beauty skills academy</title>
+  <link rel="stylesheet" href="css/style.css" />
+
+  <style>
+    /* === New Styles === */
+
+    .hair-courses-section {
+      display: flex;
+      gap: 2rem;
+      padding: 60px 20px;
+      background-color: #f9f9f9;
+      flex-wrap: wrap;
+    }
+
+    .side-image {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .side-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
+    .courses-content {
+      flex: 2;
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+    }
+
+    /* Responsive for mobile */
+    @media (max-width: 768px) {
+      .hair-courses-section {
+        flex-direction: column;
+      }
+
+      .side-image {
+        display: none; /* Hide image on mobile */
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <a href="index.html">
+          <img src="images/logo.png" alt="Salon Logo" />
+        </a>
+      </div>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="hair.html" class="active">Hair</a></li>
+        <li><a href="makeup.html">Makeup</a></li>
+        <li><a href="skin.html">Skin</a></li>
+        <li><a href="nail.html">Nail</a></li>
+        <li><a href="full.html" >Full Courses</a></li>
+      </ul>
+      <div class="menu-toggle" id="mobile-menu">&#9776;</div>
+    </nav>
+  </header>
+
+  <section style="
+    width: 100vw; 
+    height: 50vh; 
+    background: url('images/Artboard Saloon.png') no-repeat center center / cover; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    color: white; 
+    font-size: 4vw; 
+    font-weight: 700; 
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.7); 
+    user-select: none;
+  ">
+    <h2>Professional Hair Course</h2>
+  </section>
+
+  <section class="hair-courses-section">
+
+    <div class="side-image">
+      <video src="images/08182d5678d27a5993520402f9faf43f.mp4" controls autoplay muted loop>
+    Your browser does not support the video tag.
+  </video>
+    </div>
+
+    <div class="courses-content">
+
+      <div class="course-block">
+        <h1>1.(BIH)</h1>
+        <h2>Basic in Hair</h2>
+        <p><strong>Course Duration:</strong> 1 Month</p>
+        <p>Get started with hair styling fundamentals including hair hygiene, shampooing, basic hair cutting, and blow drying techniques suitable for beginners.</p>
+      </div>
+
+      <div class="course-block">
+        <h1>2.(IDIHD)</h1>
+        <h2>International Diploma in Hair Designing</h2>
+        <p><strong>Course Duration:</strong> 4 Months</p>
+        <p>Learn advanced cutting, coloring, straightening, and chemical treatments with international techniques and client consultations included.</p>
+      </div>
+
+      <div class="course-block">
+        <h1>3.(IDIHD)</h1>
+        <h2>International Diploma in Hair Designing (Gents)</h2>
+        <p><strong>Course Duration:</strong> 2 Months</p>
+        <p>Specifically tailored for men’s hair design including fades, classic styles, beard grooming, and international gents cutting methods.</p>
+      </div>
+
+      <div class="course-block">
+        <h1>4.(MIH)</h1>
+        <h2>Master in Hair</h2>
+        <p><strong>Course Duration:</strong> 3 Months</p>
+        <p>Master the art of hairstyling including advanced coloring, trending cuts, hair extension techniques, and professional salon management skills.</p>
+      </div>
+
+    </div>
+
+  </section>
+
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-about">
+        <h3>International Beauty Skills Academy</h3>
+        <p>
+          Empowering you with professional courses in hair, makeup, skin care, and nails to build a brilliant beauty career.
+        </p>
+      </div>
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="certificate.html">Certificate</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <h4>Contact Us</h4>
+        <p>Email: ibsainternationalbeautyskillsa@gmail.com</p>
+        <p>Phone: +91 87289 85104</p>
+        <p>Address: Opp ITI, St. No. 2, Chandigarh Rd, Ranjit Nagar, Nawanshahr, Punjab 144514</p>
+        <div class="social-icons">
+          <a href="#" aria-label="Facebook"><img src="https://cdn-icons-png.flaticon.com/24/733/733547.png" alt="Facebook" /></a>
+          <a href="#" aria-label="Instagram"><img src="https://cdn-icons-png.flaticon.com/24/733/733558.png" alt="Instagram" /></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Beauty Skills Academy. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
